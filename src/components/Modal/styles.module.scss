@@ -1,0 +1,29 @@
+.modal {
+  display: block;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.modal__content {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  overflow: auto;
+  -webkit-overflow-scrolling: 'touch';
+  border-radius: 36px;
+  outline: none;
+  padding: 20px;
+
+  @media (max-width: 780px) {
+    border-radius: 18px 18px 0 0;
+  }
+}
