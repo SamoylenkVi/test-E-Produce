@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url('/public/fonts/circe-regular.woff2') format('woff2'),
+    url('/public/fonts/circe-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url('/public/fonts/circe-bold.woff2') format('woff2'),
+    url('/public/fonts/circe-bold.woff') format('woff');
+}
+
+:root {
+  font-family: Circe, Arial, sans-serif;
+  font-size: 100%;
+
+  // @media (max-width: 1150px) {
+  //   .block {
+  //     font-size: 10px;
+  //   }
+  // }
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.wrapper {
+  max-width: 1160px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
