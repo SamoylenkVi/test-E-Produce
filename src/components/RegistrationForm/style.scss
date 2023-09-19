@@ -1,0 +1,214 @@
+.registration__title {
+  text-transform: uppercase;
+  font-size: 2.75em;
+  line-height: 1.14em;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 0.14em;
+
+  @media (max-width: 780px) {
+    font-size: 2.3em;
+  }
+}
+
+.registration__form {
+  display: flex;
+  flex-direction: column;
+  width: 27.9vw;
+  margin: 0 auto;
+
+  @media (max-width: 780px) {
+    width: 100%;
+  }
+}
+
+.registration__label,
+.registration__input {
+  font-size: 1.125em;
+  line-height: 1.12em;
+}
+
+.registration__label {
+  padding-bottom: 0.5em;
+  margin-top: 0.89em;
+
+  &--checkbox {
+    font-weight: 400;
+    display: flex;
+    gap: 0.55em;
+    line-height: 1.16em;
+  }
+
+  @media (max-width: 780px) {
+    padding-bottom: 0.9em;
+    margin-top: 1.1em;
+
+    &--checkbox {
+      font-size: 1.34em;
+      margin-top: 0.5em;
+    }
+  }
+}
+
+.registration__label--checkbox .registration__input {
+  display: none;
+}
+
+.registration__label--checkbox .checkmark {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #3c4497;
+  outline: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+
+  &:focus {
+    outline: 1px solid tomato;
+  }
+}
+
+.registration__input:checked + label .checkmark {
+  background-image: url('../../assets/checked.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.registration__link {
+  color: #3c4497;
+}
+
+.registration__input {
+  font-family: Circe, Arial, sans-serif;
+  padding: 0.978em 1.12em;
+  font-weight: 400;
+  color: #000000;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: #444444;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #3c4497;
+  }
+
+  &--error {
+    border-color: #ff191f;
+  }
+
+  @media (max-width: 780px) {
+    border-radius: 8px;
+    font-size: 1.5em;
+    line-height: 1em;
+    padding: 0.5em 0.58em;
+    margin-bottom: 0.2em;
+  }
+}
+
+.error {
+  color: #ff191f;
+  font-weight: 700;
+  font-size: 0.875em;
+  padding: 0;
+  margin: 0;
+  margin-top: 0.3em;
+
+  @media (max-width: 780px) {
+    font-size: 1em;
+  }
+}
+
+.registration__button {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 0.84em;
+  background-color: #3c4497;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 0.83em;
+  margin-top: 0.75em;
+  box-sizing: border-box;
+
+  &:hover {
+    opacity: 50%;
+  }
+
+  &:focus {
+    outline: 2px solid #ffffff;
+  }
+
+  @media (max-width: 780px) {
+    margin-top: 0;
+    border-radius: 8px;
+  }
+}
+
+.registration__sign-in {
+  text-align: center;
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 0.83em;
+  padding-top: 0.83em;
+
+  & .registration__link {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 780px) {
+    font-size: 1.33em;
+    padding-top: 1em;
+  }
+}
+
+.triumph__icon {
+  background-image: url(/src/assets/success.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 2.86em;
+  height: 2.86em;
+  margin-bottom: 0.45em;
+
+  @media (max-width: 780px) {
+    width: 3.21em;
+    height: 3.21em;
+    margin-bottom: 0.714em;
+  }
+}
+
+.triumph__title {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 780px) {
+    padding-top: 0.7em;
+  }
+}
+
+.triumph__text {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 0.7em 0;
+
+  @media (max-width: 780px) {
+    font-size: 1.33em;
+    margin-bottom: 1.1em;
+  }
+}
+
+.triumph__button {
+  margin-top: 0;
+  width: 27.9vw;
+
+  @media (max-width: 780px) {
+    width: 100%;
+  }
+}
