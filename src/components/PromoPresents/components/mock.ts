@@ -5,10 +5,10 @@ import scooterImgUrl from '../../../../public/img/scooter.png';
 const presentName = ['Электросамокат', 'Колонка', 'Смарт часы'];
 const presentUrl = [scooterImgUrl, alisaImgUrl, watchImgUrl];
 
-export const presents = new Array(3).fill('').map((element, index) => {
-  return (element = {
+export const presents = new Array(3).fill('').map((_, index) => {
+  return {
     id: index,
     name: presentName[index],
     image: presentUrl[index],
-  });
+  };
 });
