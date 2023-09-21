@@ -1,0 +1,119 @@
+.presents {
+  margin-top: -2em;
+  background-repeat: no-repeat;
+  background-size: 11vw 35vh;
+  background-position: right -3vw top;
+
+  background-image: url('/public/img/lemon.png');
+
+  @media (min-resolution: 2dppx) {
+    background-image: url('/public/img/lemon@2x.png');
+  }
+
+  @media (max-width: 780px) {
+    background: none;
+  }
+}
+
+.presents__title {
+  text-align: center;
+  font-size: 2em;
+  line-height: 1em;
+  padding-top: 2.3em;
+  margin: 0;
+
+  @media (max-width: 780px) {
+    font-size: 1.4em;
+    line-height: 1.2em;
+  }
+}
+
+.presents__list {
+  padding: 1.4em 0 1.6em;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1.7em;
+  font-size: 1.5em;
+
+  @media (max-width: 780px) {
+    flex-direction: column;
+    gap: 0.2em;
+    padding: 0.5em 0 0.8em;
+  }
+}
+
+.present__card {
+  flex-basis: 31%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    border-radius: 36px;
+    width: 100%;
+    height: 74%;
+    background-color: #ffd907;
+    z-index: -1;
+  }
+  & p {
+    line-height: 1.33em;
+    margin: 0;
+    padding-bottom: 2em;
+  }
+
+  & img {
+    width: 19vw;
+    height: 35vh;
+    object-fit: contain;
+    padding-bottom: 1.8em;
+  }
+
+  @media (max-width: 780px) {
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 0.3em;
+    padding-bottom: 0.8em;
+
+    & p {
+      font-size: 0.77em;
+      padding-bottom: 0;
+      padding-top: 2.5em;
+    }
+
+    & img {
+      flex-basis: 44%;
+      width: 33vw;
+      height: 19vh;
+      padding-bottom: 0;
+      padding-left: 0.5em;
+    }
+
+    &::after {
+      border-radius: 20px;
+      height: 17vh;
+    }
+  }
+}
+
+.presents__button {
+  background-color: #3c4497;
+  color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5em;
+  line-height: 0.83em;
+  width: 25vw;
+  min-width: 300px;
+
+  @media (max-width: 780px) {
+    width: 100%;
+  }
+}
