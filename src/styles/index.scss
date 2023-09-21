@@ -18,15 +18,22 @@
     url('/public/fonts/circe-bold.woff') format('woff');
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 :root {
   font-family: Circe, Arial, sans-serif;
   font-size: 100%;
 
-  // @media (max-width: 1150px) {
-  //   .block {
-  //     font-size: 10px;
-  //   }
-  // }
+  @media (max-width: 1200px) {
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0;
 }
 
 .visually-hidden {
@@ -40,20 +47,9 @@
 }
 
 .wrapper {
-  max-width: 1160px;
-  padding: 0 15px;
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  box-sizing: border-box;
+  padding-left: 1.4em;
+  padding-right: 1.4em;
 }
