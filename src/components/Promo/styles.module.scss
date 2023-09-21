@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 8.2em;
+  position: relative;
 
   &::before,
   &::after {
@@ -21,7 +22,7 @@
     bottom: 0;
     left: 0;
     width: 52vw;
-    height: 87vh;
+    height: 87%;
     background-image: url(/public/img/bottle-desktop.png);
     background-position: bottom left;
 
@@ -31,12 +32,12 @@
   }
 
   &::after {
-    bottom: 0;
+    bottom: 4vh;
     right: 0;
     background-image: url(/public/img/promo-desktop.png);
-    background-position: bottom right;
+    background-position: bottom right 1em;
     width: 39vw;
-    height: 79vh;
+    height: 79%;
 
     @media (min-resolution: 2dppx) {
       background-image: url(/public/img/promo-desctop@2x.png);
