@@ -10,6 +10,15 @@ type IconProps = {
   }
 >;
 
-export const Icon = ({ component: IconComponent, ...restProps }: IconProps) => (
-  <IconComponent focusable="false" aria-hidden="true" {...restProps} />
+export const Icon = ({
+  component: IconComponent,
+  className: className,
+  ...restProps
+}: IconProps) => (
+  <IconComponent
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+    {...restProps}
+  />
 );
