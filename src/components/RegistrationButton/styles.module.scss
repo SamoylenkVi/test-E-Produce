@@ -1,3 +1,24 @@
+.registrationButton {
+  font-family: Circe, Arial, sans-serif;
+  font-size: 1.125em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  border-radius: 14px;
+  outline-color: #ffd907;
+  padding: 0.77em 1.11em;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 50%;
+  }
+
+  @media (max-width: 780px) {
+    background-color: #3c4497;
+    color: #ffffff;
+  }
+}
+
 .modal__registration {
   display: flex;
   flex-direction: column;

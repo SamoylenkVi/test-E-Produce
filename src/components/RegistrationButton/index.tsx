@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { useModal } from '../../hooks';
 import { Modal } from '../Modal';
 import { RegistrationForm } from '../RegistrationForm';
@@ -6,9 +7,13 @@ import styles from './styles.module.scss';
 
 type RegistrationButtonProps = {
   text: string;
+  registrationClass?: string;
 };
 
-export const RegistrationButton = ({ text }: RegistrationButtonProps) => {
+export const RegistrationButton = ({
+  text,
+  registrationClass,
+}: RegistrationButtonProps) => {
   const { isModalOpen, openModal, closeModal, modalContent } = useModal();
 
   return (
@@ -25,8 +30,8 @@ export const RegistrationButton = ({ text }: RegistrationButtonProps) => {
             </Modal>,
           )
         }
-        type="submit"
-        className="login-button"
+        type="button"
+        className={cx(styles.registrationButton, registrationClass)}
       >
         {text}
       </button>

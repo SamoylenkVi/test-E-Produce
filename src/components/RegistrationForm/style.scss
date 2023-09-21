@@ -71,7 +71,7 @@
 }
 
 .registration__input:checked + label .checkmark {
-  background-image: url('../../assets/checked.svg');
+  background-image: url('/src/assets/checked.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
