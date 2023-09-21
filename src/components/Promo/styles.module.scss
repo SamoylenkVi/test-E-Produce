@@ -1,33 +1,58 @@
 .promo {
   margin: 0 auto;
+  box-sizing: border-box;
   text-align: center;
   height: 100vh;
-  background-image: url(/public/img/main-promo.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #b1c728;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding-top: 8.2em;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url(/public/img/main-promo@2x.jpg);
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &::before {
+    bottom: 0;
+    left: 0;
+    width: 52vw;
+    height: 87vh;
+    background-image: url(/public/img/bottle-desktop.png);
+    background-position: bottom left;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(/public/img/bottle-desktop@2x.png);
+    }
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+    background-image: url(/public/img/promo-desktop.png);
+    background-position: bottom right;
+    width: 39vw;
+    height: 79vh;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(/public/img/promo-desctop@2x.png);
+    }
   }
 
   @media (max-width: 780px) {
-    background-color: #b1c728;
+    justify-content: center;
     background-image: none;
     position: relative;
     padding: 2.7em 1.5em 1em;
 
     &::before,
     &::after {
-      content: '';
-      position: absolute;
       left: 50%;
       transform: translate3d(-50%, 0, 0);
-      background-repeat: no-repeat;
-      background-size: contain;
     }
 
     &::before {
@@ -59,13 +84,15 @@
 
 .promo__title {
   white-space: pre-line;
-  font-size: 4.375em;
+  font-size: 8.7vh;
   text-transform: uppercase;
   line-height: 1em;
   color: #ffffff;
-  padding: 1.9em 0 0.39em;
+  padding: 0 0 0.39em;
   margin: 0 auto;
   max-width: 500px;
+  position: relative;
+  z-index: 1;
 
   @media (max-width: 780px) {
     font-size: 1.75em;
@@ -83,6 +110,8 @@
   line-height: 0.66em;
   padding: 1em 1.33em;
   margin-bottom: 9.5em;
+  position: relative;
+  z-index: 1;
 
   @media (max-width: 780px) {
     margin-bottom: 0;
